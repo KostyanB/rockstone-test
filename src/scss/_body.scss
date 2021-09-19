@@ -1,11 +1,10 @@
 
 body {
-    font: {
-        family: Geometria;
-        style: normal;
-        weight: 500;
-        size: 36px;
-    }
-    color: #F2F2F2;
-    background: linear-gradient(122.76deg, #FFA2A2 4.09%, #FF7B7B 91.04%);
+    @extend %f_style;
+    box-sizing: border-box;
+    background: radial-gradient(#7FD37D, #348219);
+}
+
+.hidden {
+    display: none;
 }

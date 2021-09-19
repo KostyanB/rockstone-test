@@ -6,14 +6,167 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Rockstone</title>
-	<!-- <link rel="preload" href="fonts/Geometria-Bold.woff2" as="font" type="font/woff2" crossorigin>  -->
-    <!-- <link rel="preload" href="fonts/Geometria-Regular.woff2" as="font" type="font/woff2" crossorigin> -->
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="icon" type="image/png" href="../images/favicon/icon-72x72.png">
-
+	<link rel="preload" href="fonts/Roboto.woff" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/Roboto.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/Robotobold.woff" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/Robotobold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="icon" type="image/png" href="images/favicon/icon-72x72.png">
 </head>
 
 <body>
+	<nav class="navbar">
+		<button class="navbar__btn_open-menu" id="open-menu">
+			<img src="images/icons/menu.svg" alt="open-menu">
+		</button>
+	</nav>
+	<!-- modal -->
+	<div class="modal" id="modal-menu">
+		<div class="modal__menu">
+
+			<!-- left modal block -->
+			<div class="modal__menu_left left-modal">
+				<div class="left-modal__profile">
+					<div class="left-modal__profile_img">
+						<img src="images/user.jpg" alt="user" />
+					</div>
+					<div class="left-modal__profile_user-name">
+						<span>Мой<br />Профиль</span>
+					</div>
+				</div>
+				<div class="left-modal__nav">
+
+					<div class="left-modal__menu-elem">
+						<button class="left-modal__menu-btn main">
+							<img src="images/icons/menu.svg" alt="menu" />
+							<span>Меню</span>
+						</button>
+						<div class="left-modal__label left-modal__label_main"></div>
+					</div>
+					<div class="left-modal__menu-elem">
+						<button class="left-modal__menu-btn balance">
+							<img src="images/icons/balance.svg" alt="balance">
+							<span>Баланс</span>
+						</button>
+						<div class="left-modal__label left-modal__label_main"></div>
+					</div>
+					<div class="left-modal__menu-elem">
+						<button class="left-modal__menu-btn sale">
+							<img src="images/icons/badge.svg" alt="sale">
+							<span>Акции</span>
+						</button>
+						<div class="left-modal__label left-modal__label_main"></div>
+					</div>
+				</div>
+				<div class="left-modal__support">
+					<div class="left-modal__menu-elem">
+						<button class="left-modal__menu-btn support">
+							<img src="images/icons/support.svg" alt="support">
+						</button>
+						<div class="left-modal__label left-modal__label_support"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- right modal block -->
+			<div class="modal__menu_right right-modal">
+				<h2 class="right-modal__title">Влад</h2>
+				<div class="right-modal__header">
+					<div class="right-modal__header_field">
+						<div class="right-modal__header_user-photo">
+							<img src="images/sub-user.jpg" alt="sub-user" />
+						</div>
+						<div class="right-modal__header_description">
+							<p class="right-modal__header_relation">Женат на</p>
+							<p class="right-modal__header_user-name">Нина Крылова</p>
+						</div>
+					</div>
+					<div class="right-modal__header_label">
+						<img src="images/ring.png" alt="label">
+					</div>
+				</div>
+				<ul class="right-modal__list">
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/events.svg" alt="events" />
+						</div>
+						<button class="right-modal__item_btn">События</button>
+						<div class="right-modal__item_note">
+							<div class="right-modal__item_notification">2</div>
+						</div>
+					</li>
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/friends.svg" alt="friends" />
+						</div>
+						<button class="right-modal__item_btn">Друзья и гости</button>
+						<div class="right-modal__item_note"></div>
+					</li>
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/leagues.svg" alt="leagues" />
+						</div>
+						<button class="right-modal__item_btn">Лиги</button>
+						<div class="right-modal__item_note"></div>
+					</li>
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/settings.svg" alt="settings" />
+						</div>
+						<button class="right-modal__item_btn">Настройки</button>
+						<div class="right-modal__item_note"></div>
+					</li>
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/leaders.svg" alt="leaders" />
+						</div>
+						<button class="right-modal__item_btn">Лидеры</button>
+						<div class="right-modal__item_note"></div>
+					</li>
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/achivement.svg" alt="achivement" />
+						</div>
+						<button class="right-modal__item_btn">Достижения</button>
+						<div class="right-modal__item_note"></div>
+					</li>
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/collections.svg" alt="collections" />
+						</div>
+						<button class="right-modal__item_btn">Коллекции</button>
+						<div class="right-modal__item_note"></div>
+					</li>
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/search.svg" alt="search" />
+						</div>
+						<button class="right-modal__item_btn">Поиск по игрокам</button>
+						<div class="right-modal__item_note"></div>
+					</li>
+					<li class="right-modal__item">
+						<div class="right-modal__item_label">
+							<img src="images/icons/wedding.svg" alt="wedding" />
+						</div>
+						<button class="right-modal__item_btn">Свадьбы</button>
+						<div class="right-modal__item_note">
+							<img src="images/icons/badge.svg" alt="sale" />
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- modal__overlay -->
+		<div class="modal__overlay">
+			<button class="modal__overlay_close" id="close-menu">
+				<svg viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M16.9882 6.06381L17.0163 6.06995H4.97152L8.75796 2.27517C8.94337 2.0899 9.04508 1.83893 9.04508 1.57551C9.04508 1.3121 8.94337 1.06288 8.75796 0.877171L8.16879 0.287707C7.98352 0.102439 7.73664 0 7.47337 0C7.20996 0 6.96293 0.101707 6.77766 0.286976L0.28698 6.77707C0.10098 6.96307 -0.000727787 7.21083 3.92069e-06 7.47439C-0.000727787 7.73942 0.10098 7.98732 0.28698 8.17303L6.77766 14.6637C6.96293 14.8488 7.20981 14.9507 7.47337 14.9507C7.73664 14.9507 7.98352 14.8487 8.16879 14.6637L8.75796 14.0742C8.94337 13.8893 9.04508 13.6422 9.04508 13.3788C9.04508 13.1156 8.94337 12.8816 8.75796 12.6964L4.92878 8.88044H17.0017C17.5442 8.88044 18 8.41288 18 7.87068V7.03698C18 6.49478 17.5307 6.06381 16.9882 6.06381Z" />
+				</svg>
+			</button>
+		</div>
+	</div>
 
 </body>
+
 </html>

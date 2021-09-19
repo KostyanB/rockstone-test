@@ -1,0 +1,34 @@
+/* кнопка открытия меню */
+$nav_back: rgba(0, 0, 0, .25);
+$hover_back: rgba(255, 214, 70, .25);
+
+%nav_btn {
+    width: 33px;
+    height: 33px;
+    border-radius: 16.5px;
+    background-color: $nav_back;
+
+    &:hover,
+    &:active {
+        background-color: $hover_back;
+    }
+}
+
+.navbar {
+    @extend %flex_center;
+    max-width: 90vw;
+    margin: 29px auto;
+
+    &__btn {
+
+        &_open-menu {
+            @extend %nav_btn;
+            @extend %flex_center;
+
+            img {
+                width: 13.3px;
+                height: 10.73px;
+            }
+        }
+    }
+}

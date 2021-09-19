@@ -13,7 +13,7 @@ const isDev = mode === 'development';
 module.exports = {
 	entry: ['@babel/polyfill', './src/index.js'],
 	output: {
-		filename: 'main.js',
+		filename: 'index.js',
 		path: path.resolve(__dirname, './build'),
 		clean: true,
 		environment: {
@@ -49,14 +49,17 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-env',
-							{
-								"useBuiltIns": "usage",
-								"corejs": {
-									"version": "3.8",
-									"proposals": true
+						"presets": [
+							[
+								"@babel/preset-env",
+								{
+									"useBuiltIns": "usage",
+									"corejs": {
+										"version": "3.8",
+										"proposals": true
+									}
 								}
-							}
+							]
 						]
 					},
 				},

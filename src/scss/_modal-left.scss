@@ -1,0 +1,99 @@
+/* левый блок модального меню */
+.left-modal {
+    @extend %flex_col;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 20px;
+
+    &__profile {
+        @extend %flex_col;
+        width: 65px;
+        height: 110px;
+        background: $light_brown;
+        border-radius: 10px;
+        padding-top: 4px;
+
+        &_img {
+            width: 60px;
+            height: 70px;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &_user-name {
+            @extend %f_profile;
+            width: 52px;
+            height: 28px;
+            text-align: center;
+            margin-top: 3px;
+        }
+    }
+
+    &__nav, &__support {
+        @extend %flex_col;
+        width: 100%;
+    }
+    &__nav {
+        height: 240px;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    &__support {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    &__menu-elem {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    // зеленые лейблы
+    &__label {
+        width: 3px;
+        position: absolute;
+        right: 0;
+        top: 6px;
+
+        &_main {
+            height: 58px;
+        }
+        &_support {
+            height: 28px;
+        }
+    }
+
+    // кнопки
+    &__menu-btn {
+        @extend %button;
+        @extend %flex_col;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .main, .balance, .sale {
+        @extend %f_button;
+        height: 70px;
+        justify-content: space-between;
+    }
+    .main {
+        img {
+            margin-top: 6px;
+        }
+    }
+    .support {
+        height: 40px;
+        justify-content: center;
+    }
+    // выделение лейблов при наведении на кнопки
+    &__menu-btn:hover + &__label,
+    &__menu-btn:active + &__label,
+    .active {
+        background-color: $green;
+    }
+}

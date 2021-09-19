@@ -1,3 +1,7 @@
 import './css/style.css';
+import handleModal from './modules/handleModal';
 
-console.log('it work');
+// время анимации модального меню
+const modalAnimTime = 300;
+
+handleModal(modalAnimTime);

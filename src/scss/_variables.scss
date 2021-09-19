@@ -1,0 +1,109 @@
+// colors
+$violet_back: #4F369C;
+$violet_back2: #6752a7;
+$light_brown: #3A3A3A;
+$dark_brown: #252529;
+$dark_gray: #808080;
+$light_gray: #E0E0E0;
+$red: #FE041B;
+$yellow: rgb(255, 214, 70);
+$green: #01C138;
+$overlay: rgba(227, 229, 248, .4);
+$border: rgba(255, 255, 255, 0.24);
+
+// fonts
+%f_style {
+    color: #FFFFFF;
+    font: {
+        family: Roboto;
+        style: normal;
+    }
+}
+
+%f_bold {
+    @extend %f_style;
+    font-weight: bold;
+}
+
+%f_norm {
+    @extend %f_style;
+    font-weight: normal;
+}
+
+%f_button {
+    @extend %f_bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+
+%f_menu {
+    @extend %f_bold;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+}
+
+%f_profile {
+    @extend %f_norm;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    opacity: 0.5;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+%f_sub {
+    @extend %f_bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+}
+
+%f_sub_title {
+    @extend %f_norm;
+    font-size: 12px;
+    line-height: 14px;
+    color: $light_gray;
+}
+
+%f_title {
+    @extend %f_bold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+}
+
+%f_note {
+    @extend %f_bold;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+}
+
+// flex
+%flex_col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// flex-center
+%flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//  button
+%button {
+    width: 60px;
+    background-color: $violet_back;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $violet_back2;
+    }
+}
