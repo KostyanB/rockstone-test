@@ -1,4 +1,6 @@
-import { animate } from './raf';
+import { animate } from './animate';
+import createModalMenuRight from './createModalMenuRight/createModalMenuRight';
+import createModalMenuLeft from './createModalMenuLeft/createModalMenuLeft';
 
 const handleModal = time => {
     const modalMenu = document.getElementById('modal-menu');
@@ -14,12 +16,18 @@ const handleModal = time => {
                 modalMenu.style.transform = `translateX(${pos}%)`;
             },
         });
-    }
+    };
+
+    const createModalMenu = () => {
+        createModalMenuRight();
+        createModalMenuLeft();
+        toggleModal(-100, 0);
+    };
 
     document.addEventListener('click', e => {
-        e.target.closest('#open-menu') && toggleModal(-100, 0);
+        e.target.closest('#open-menu') && createModalMenu();
         e.target.closest('#close-menu') && toggleModal(0, -100);
-    })
+    });
 
 };
 export default handleModal;

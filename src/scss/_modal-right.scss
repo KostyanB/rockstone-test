@@ -1,4 +1,4 @@
-/* правый блок модального меню */
+/* right block of modal menu */
 .right-modal {
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
             padding-left: 5px;
         }
     }
-
+    // header
     &__header {
         width: 100%;
         height: 47px;
@@ -50,7 +50,6 @@
 
         &_description {
             margin-left: 5px;
-
         }
 
         &_relation {
@@ -114,14 +113,26 @@
             margin-bottom: 0;
         }
 
-        &_label {
+        &_label, &_note {
             @extend %flex_center;
             width: 23px;
             height: 23px;
+        }
 
+        &_label {
             img {
                 height: auto;
                 width: 100%;
+            }
+        }
+        &_note {
+            position: relative;
+
+            img {
+                height: 26px;
+                width: auto;
+                position: absolute;
+                right: 0;
             }
         }
 
@@ -139,15 +150,6 @@
 
             @media (max-width: 320px) {
                 margin-left: 5px;
-            }
-        }
-
-        &_note {
-            @extend %flex_center;
-
-            img {
-                height: 26px;
-                width: auto;
             }
         }
 

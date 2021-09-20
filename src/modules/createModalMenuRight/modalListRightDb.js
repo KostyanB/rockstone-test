@@ -1,0 +1,66 @@
+// данные для заполнения листа меню
+export const modalListRightDb = [
+    {
+        'name': 'events',
+        'title': 'События',
+        'hasNote': true,
+        'noteQuantity': 3,
+        'hasOffer': false,
+    },
+    {
+        'name': 'friends',
+        'title': 'Друзья и гости',
+        'hasNote': false,
+        'noteQuantity': 0,
+        'hasOffer': false,
+    },
+    {
+        'name': 'leagues',
+        'title': 'Лиги',
+        'hasNote': false,
+        'noteQuantity': 0,
+        'hasOffer': false,
+    },
+    {
+        'name': 'settings',
+        'title': 'Настройки',
+        'hasNote': false,
+        'noteQuantity': 0,
+        'hasOffer': false,
+    },
+    {
+        'name': 'leaders',
+        'title': 'Лидеры',
+        'hasNote': false,
+        'noteQuantity': 0,
+        'hasOffer': false,
+    },
+    {
+        'name': 'achivement',
+        'title': 'Достижения',
+        'hasNote': false,
+        'noteQuantity': 0,
+        'hasOffer': false,
+    },
+    {
+        'name': 'collections',
+        'title': 'Коллекции',
+        'hasNote': false,
+        'noteQuantity': 0,
+        'hasOffer': false,
+    },
+    {
+        'name': 'search',
+        'title': 'Поиск по игрокам',
+        'hasNote': false,
+        'noteQuantity': 0,
+        'hasOffer': false,
+    },
+    {
+        'name': 'wedding',
+        'title': 'Свадьбы',
+        'hasNote': false,
+        'noteQuantity': 0,
+        'hasOffer': true,
+    },
+];

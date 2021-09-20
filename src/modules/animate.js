@@ -1,4 +1,4 @@
-
+// use request animation frame
 export function animate({ duration, draw, timing }) {
 
 	const start = performance.now();

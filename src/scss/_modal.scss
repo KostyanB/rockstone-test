@@ -1,5 +1,7 @@
-/* модальнoe меню */
+$arrow_w: 18px;
+$arrow_h: 15px;
 
+/* modal menu */
 .modal {
     width: 100vw;
     height: 100vh;
@@ -32,7 +34,7 @@
     }
 
     &__overlay {
-        min-width: 30px;
+        min-width: $arrow_w + 12px;
         height: 100%;
         background: $overlay;
         flex-grow: 1;
@@ -41,15 +43,29 @@
         justify-content: start;
         padding-left: 6px;
 
+        @media (min-width: 1440px) {
+            min-width: $arrow_w * 2 + 12px;
+        }
+
         &_close {
-            width: 18px;
-            height: 15px;
+            width: $arrow_w;
+            height: $arrow_h;
+
+            @media (min-width: 1440px) {
+                width: $arrow_w * 2;
+                height: $arrow_h * 2;
+            }
 
             svg {
                 cursor: pointer;
-                width: 18px;
-                height: 15px;
+                width: $arrow_w;
+                height: $arrow_h;
                 fill: #fff;
+
+                @media (min-width: 1440px) {
+                    width: $arrow_w * 2;
+                    height: $arrow_h * 2;
+                }
             }
 
             &:hover>svg,

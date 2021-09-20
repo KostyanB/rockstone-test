@@ -1,4 +1,4 @@
-/* левый блок модального меню */
+/* left block of modal menu */
 .left-modal {
     @extend %flex_col;
     justify-content: space-between;
@@ -54,7 +54,7 @@
         justify-content: center;
         position: relative;
     }
-    // зеленые лейблы
+    // labels
     &__label {
         width: 3px;
         position: absolute;
@@ -68,20 +68,19 @@
             height: 28px;
         }
     }
-
-    // кнопки
+    // buttons
     &__menu-btn {
         @extend %button;
         @extend %flex_col;
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .main, .balance, .sale {
+    .menu, .balance, .sale {
         @extend %f_button;
         height: 70px;
         justify-content: space-between;
     }
-    .main {
+    .menu {
         img {
             margin-top: 6px;
         }
@@ -90,7 +89,7 @@
         height: 40px;
         justify-content: center;
     }
-    // выделение лейблов при наведении на кнопки
+    // hover labels with focus buttons
     &__menu-btn:hover + &__label,
     &__menu-btn:active + &__label,
     .active {

@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/* обнуление */
+/* reset style */
 * {
   padding: 0;
   margin: 0;
@@ -84,13 +83,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------------------------*/
-.left-modal .main, .left-modal .balance, .left-modal .sale, .right-modal__item_btn, .right-modal__header_user-name, .right-modal__title, .right-modal__item_notification, .left-modal__profile_user-name, .right-modal__header_relation, body {
+.left-modal .menu, .left-modal .balance, .left-modal .sale, .right-modal__item_btn, .right-modal__header_user-name, .right-modal__title, .right-modal__item_notification, .left-modal__profile_user-name, .right-modal__header_relation, body {
   color: #FFFFFF;
   font-family: Roboto;
   font-style: normal;
 }
 
-.left-modal .main, .left-modal .balance, .left-modal .sale, .right-modal__item_btn, .right-modal__header_user-name, .right-modal__title, .right-modal__item_notification {
+.left-modal .menu, .left-modal .balance, .left-modal .sale, .right-modal__item_btn, .right-modal__header_user-name, .right-modal__title, .right-modal__item_notification {
   font-weight: bold;
 }
 
@@ -98,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-.left-modal .main, .left-modal .balance, .left-modal .sale {
+.left-modal .menu, .left-modal .balance, .left-modal .sale {
   font-size: 12px;
   line-height: 14px;
   text-align: center;
@@ -179,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #6752a7;
 }
 
-/* шрифты*/
+/* fonts */
 @font-face {
   font-family: 'Roboto';
   src: local("Roboto"), local("Roboto-Regular"), url("fonts/Roboto.woff2") format("woff2"), url("fonts/Roboto.woff") format("woff");
@@ -206,7 +205,7 @@ body {
   display: none;
 }
 
-/* модальнoe меню */
+/* modal menu */
 .modal {
   width: 100vw;
   height: 100vh;
@@ -273,9 +272,22 @@ body {
   padding-left: 6px;
 }
 
+@media (min-width: 1440px) {
+  .modal__overlay {
+    min-width: 48px;
+  }
+}
+
 .modal__overlay_close {
   width: 18px;
   height: 15px;
+}
+
+@media (min-width: 1440px) {
+  .modal__overlay_close {
+    width: 36px;
+    height: 30px;
+  }
 }
 
 .modal__overlay_close svg {
@@ -285,12 +297,19 @@ body {
   fill: #fff;
 }
 
+@media (min-width: 1440px) {
+  .modal__overlay_close svg {
+    width: 36px;
+    height: 30px;
+  }
+}
+
 .modal__overlay_close:hover > svg,
 .modal__overlay_close:active > svg {
   fill: #4F369C;
 }
 
-/* левый блок модального меню */
+/* left block of modal menu */
 .left-modal {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -378,14 +397,14 @@ body {
   padding-bottom: 10px;
 }
 
-.left-modal .main, .left-modal .balance, .left-modal .sale {
+.left-modal .menu, .left-modal .balance, .left-modal .sale {
   height: 70px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.left-modal .main img {
+.left-modal .menu img {
   margin-top: 6px;
 }
 
@@ -402,7 +421,7 @@ body {
   background-color: #01C138;
 }
 
-/* правый блок модального меню */
+/* right block of modal menu */
 .right-modal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -528,7 +547,7 @@ body {
   margin-bottom: 0;
 }
 
-.right-modal__item_label {
+.right-modal__item_label, .right-modal__item_note {
   width: 23px;
   height: 23px;
 }
@@ -536,6 +555,17 @@ body {
 .right-modal__item_label img {
   height: auto;
   width: 100%;
+}
+
+.right-modal__item_note {
+  position: relative;
+}
+
+.right-modal__item_note img {
+  height: 26px;
+  width: auto;
+  position: absolute;
+  right: 0;
 }
 
 .right-modal__item_btn {
@@ -560,11 +590,6 @@ body {
   }
 }
 
-.right-modal__item_note img {
-  height: 26px;
-  width: auto;
-}
-
 .right-modal__item_notification {
   width: 20px;
   height: 20px;
@@ -573,7 +598,6 @@ body {
   border-radius: 10px;
 }
 
-/* кнопка открытия меню */
 .navbar__btn_open-menu {
   width: 33px;
   height: 33px;
@@ -585,12 +609,27 @@ body {
   background-color: rgba(255, 214, 70, 0.25);
 }
 
+@media (min-width: 1440px) {
+  .navbar__btn_open-menu {
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+  }
+}
+
+/* main navbar */
 .navbar {
   max-width: 90vw;
   margin: 29px auto;
 }
 
 .navbar__btn_open-menu img {
-  width: 13.3px;
-  height: 10.73px;
+  width: auto;
+  height: 11px;
+}
+
+@media (min-width: 1440px) {
+  .navbar__btn_open-menu img {
+    height: 22px;
+  }
 }

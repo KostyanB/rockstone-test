@@ -1,19 +1,25 @@
-/* кнопка открытия меню */
 $nav_back: rgba(0, 0, 0, .25);
 $hover_back: rgba(255, 214, 70, .25);
+$btn_size: 33px;
 
 %nav_btn {
-    width: 33px;
-    height: 33px;
-    border-radius: 16.5px;
+    width: $btn_size;
+    height: $btn_size;
+    border-radius: $btn_size / 2;
     background-color: $nav_back;
 
     &:hover,
     &:active {
         background-color: $hover_back;
     }
-}
 
+    @media (min-width: 1440px) {
+        width: $btn_size * 2;
+        height: $btn_size * 2;
+        border-radius: $btn_size;
+    }
+}
+/* main navbar */
 .navbar {
     @extend %flex_center;
     max-width: 90vw;
@@ -26,8 +32,11 @@ $hover_back: rgba(255, 214, 70, .25);
             @extend %flex_center;
 
             img {
-                width: 13.3px;
-                height: 10.73px;
+                width: auto;
+                height: $btn_size / 3;
+                @media (min-width: 1440px) {
+                    height: $btn_size * 2 / 3;
+                }
             }
         }
     }
