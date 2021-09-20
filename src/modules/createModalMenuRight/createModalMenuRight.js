@@ -27,8 +27,9 @@ const createModalMenuRight = () => {
                 <img src="images/icons/sale.svg" alt="sale" />
             `;
         }
-        li.append(itemNote);
-        modalList.append(li);
+        // not appned() => great thanks IE :(
+        li.appendChild(itemNote);
+        modalList.appendChild(li);
     });
 
 };

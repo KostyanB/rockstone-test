@@ -16,7 +16,7 @@
 * Модульная структура скриптов /src/modules;
 * Сборка webpack;
 * SASS/SCSS;
-* Адаптивная верстка;
+* Адаптивная верстка (without IE);
 * Request Animation Frame
 
 ## Как использовать?
