@@ -120,12 +120,14 @@
         }
 
         &_label {
+            grid-column: 1;
             img {
                 height: auto;
                 width: 100%;
             }
         }
         &_note {
+            grid-column: 3;
             position: relative;
 
             img {
@@ -138,6 +140,7 @@
 
         &_btn {
             @extend %f_menu;
+            grid-column: 2;
             color: #FFFFFF;
             display: flex;
             align-items: center;
